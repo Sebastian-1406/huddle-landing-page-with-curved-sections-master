@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --pink : hsl(322, 100%, 66%);
+    --pink-claro : hsl(321, 100%, 78%);
+    --rojo : hsl(0, 100%, 63%);
+    --azul-oscuro : hsl(192, 100%, 9%);
+    --blanco : hsl(207, 100%, 98%);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.contenedor-resgitro{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-resgitro .logo{
+    width: 150px;
+}
+
+.btn{
+    text-decoration: none;
+    border: 1px solid var(--pink);
+    border-radius: 100px;
+    padding: 7px 30px;
+    color: var(--pink);
+    box-shadow: 0px 0px 7px #0002;
+    transition: border, color .3s;
+}
+.btn:hover{
+    border: 1px solid var(--pink-claro);
+    color: var(--pink-claro);
+
+}
+.btn-pink{
+    padding: 15px 60px;
+    background: var(--pink);
+    color: var(--blanco);
+    font-weight: 600;
+    box-shadow: 0px 3px 10px #0004;
+    color: var(--blanco);
+    border: none;
+    transition: background .3s;
+}
+.btn-pink:hover{
+    background: var(--pink-claro);
+    color: var(--blanco);
+    border: none;
+}
+
+.header .contenedor-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: var(--azul-oscuro);
+}
+
+.contenedor-texto .titulo{
+    font-size: 37px;
+    color: var(--azul-oscuro);
+
+}
+.titulo {
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor-texto .parrafo{
+    text-align: center;
+    width: 37%;
+}
+
+.mockups{
+    width: 70%;
+    display: flex;
+    margin: 50px auto;
+}
+
+.contenedor-popularidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.estado{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.estado .imagen{
+    width: 35px;
+}
+.estado .numero{
+    font-size: 70px;
+    color: var(--azul-oscuro);
+}
+.estado .parrafo{
+    font-weight: 600;
+    text-align: center;
+    color:#b8bdc0;
+    font-size: 18px;
+}
+
+.section__card{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 100px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    background: #f6fbff;
+
+}
+.card-texto{
+    width: 46%;
+}
+.card-texto .titulo{
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.card-texto .parrafo{
+    line-height: 23px;
+    color: var(--azul-oscuro);
+}
+.card-imagen{
+    width: 50%;
+    text-align: center; 
+
+}
+.card-imagen .imagen{
+    width: 100%;
+    max-width: 450px;  
+}
+
+.card-reverse{
+    flex-direction: row-reverse;
+    background: #fff;
+}
+
+.fondo{
+    width: 100%;
+    vertical-align: middle;
+
+}
+
+.section-comunidad{
+    margin: 120px 0;
+    text-align: center;
+}
+.section-comunidad .titulo{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--azul-oscuro);
+}
+
+
+.footer{
+    background: #00252E;
+    padding: 100px;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fondo-footer{
+    position: relative;
+    bottom: -1px;
+}
+
+.footer .logo{
+    width: 200px;
+}
+.footer-contacto{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-contacto .parrafo{
+    color: #eeee;
+    margin: 20px 0;
+    line-height: 25px;
+
+}
+
+.address span{
+    display: block;
+    margin: 10px 0;
+    color: #eeee;
+    font-style: normal;
+}
+.icon-address{
+    margin-right: 20px;
+}
+
+.redes-sociales{
+    display: inline-flex;
+    gap: 15px;
+    margin: 50px 0;
+}
+
+.fab{
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    transition: color .3s;
+}
+.fab:hover{
+    color: #00c5f9;
+}
+.suscribirse{
+    width: 50%;
+}
+
+.suscribirse .titulo{
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.suscribirse .parrafo{
+    width: 66%;
+    color: #eee;
+    line-height: 25px;
+}
+.registro{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.registro .email{
+    padding: 13px 10px;
+    border-radius: 5px;
+    width: 50%;
+    border: 1px solid var(--azul-oscuro);
+    outline: none;
+}
+.btn-rosado{
+    border-radius: 5px;
+    padding: 5px 40px;
+    cursor: pointer;
+    background: var(--pink);
+    color: var(--blanco);
+    font-weight: 700;
+    border: none;
+    transition: background .3s;
+}
+.mensaje{
+    color: var(--rojo);
+    font-size: 13px;
+    position: absolute;
+    bottom: -25px;
+    display: none;
+}
+.active .email{
+    border: 1px solid var(--rojo);
+}
+.active .mensaje{
+    display: block;
+}
+.btn-rosado:hover{
+    background: var(--pink-claro);
+    color: var(--blanco);
+    border: none;
+}
