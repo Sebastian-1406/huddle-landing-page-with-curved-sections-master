@@ -1,285 +1,98 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
 
 :root{
     --pink : hsl(322, 100%, 66%);
     --pink-claro : hsl(321, 100%, 78%);
     --rojo : hsl(0, 100%, 63%);
     --azul-oscuro : hsl(192, 100%, 9%);
-    --blanco : hsl(207, 100%, 98%);
+    --Very-Pale-Blue : hsl(207, 100%, 98%);
+    --font1 : 'Open Sans', sans-serif;
+    --font2 : 'Poppins', sans-serif;
+
+
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font1);
 }
-
-
-.contenedor-resgitro{
-    padding: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.contenedor-resgitro .logo{
-    width: 150px;
-}
-
-.btn{
-    text-decoration: none;
-    border: 1px solid var(--pink);
-    border-radius: 100px;
-    padding: 7px 30px;
-    color: var(--pink);
-    box-shadow: 0px 0px 7px #0002;
-    transition: border, color .3s;
-}
-.btn:hover{
-    border: 1px solid var(--pink-claro);
-    color: var(--pink-claro);
-
-}
-.btn-pink{
-    padding: 15px 60px;
-    background: var(--pink);
-    color: var(--blanco);
-    font-weight: 600;
-    box-shadow: 0px 3px 10px #0004;
-    color: var(--blanco);
-    border: none;
-    transition: background .3s;
-}
-.btn-pink:hover{
-    background: var(--pink-claro);
-    color: var(--blanco);
-    border: none;
-}
-
-.header .contenedor-texto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    color: var(--azul-oscuro);
-}
-
-.contenedor-texto .titulo{
-    font-size: 37px;
-    color: var(--azul-oscuro);
-
-}
-.titulo {
-    font-family: 'Poppins', sans-serif;
-}
-.contenedor-texto .parrafo{
-    text-align: center;
-    width: 37%;
-}
-
-.mockups{
-    width: 70%;
-    display: flex;
-    margin: 50px auto;
-}
-
-.contenedor-popularidad{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.estado{
-    display: inline-flex;
-    flex-direction: column;
-}
-
-.estado .imagen{
-    width: 35px;
-}
-.estado .numero{
-    font-size: 70px;
-    color: var(--azul-oscuro);
-}
-.estado .parrafo{
-    font-weight: 600;
-    text-align: center;
-    color:#b8bdc0;
-    font-size: 18px;
-}
-
-.section__card{
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    margin-top: 100px;
-}
-.card{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 100px;
-    background: #f6fbff;
-
-}
-.card-texto{
-    width: 46%;
-}
-.card-texto .titulo{
-    color: var(--azul-oscuro);
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: 700;
-}
-.card-texto .parrafo{
-    line-height: 23px;
-    color: var(--azul-oscuro);
-}
-.card-imagen{
-    width: 50%;
-    text-align: center; 
-
-}
-.card-imagen .imagen{
-    width: 100%;
-    max-width: 450px;  
-}
-
-.card-reverse{
-    flex-direction: row-reverse;
+.header {
     background: #fff;
 }
 
-.fondo{
-    width: 100%;
-    vertical-align: middle;
-
-}
-
-.section-comunidad{
-    margin: 120px 0;
-    text-align: center;
-}
-.section-comunidad .titulo{
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--azul-oscuro);
-}
-
-
-.footer{
-    background: #00252E;
-    padding: 100px;
-    padding-top: 70px;
-    padding-bottom: 40px;
+.nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
-.fondo-footer{
-    position: relative;
-    bottom: -1px;
+.logo {
+    width: 130px;
 }
-
-.footer .logo{
-    width: 200px;
+.contenedor {
+    padding: 30px 20px;
 }
-.footer-contacto{
-    width: 30%;
+.contenedor__header {
+    padding: 0 20px;
+}
+.contenedor__header .texto:first-child p{
+    text-shadow: 0px 0px 10px #0005;
+}
+.texto {
+    text-align: center;
+    padding: 80px 0;
+}
+.texto p {
+    font-size: 14px;
+    line-height: 20px;    
+}
+.texto h1:first-child {
+    font-size: 1.5em;
+    font-family: var(--font2);
+}
+.btn {
+    border-radius: 100px;
+    border: none;
+    font-size: 14px;
+}
+.btn__pink-claro {
+    color: var(--pink-claro);
+    border: 1px solid var(--pink-claro);
+    background: #fff;
+    padding: 5px 20px;
+    padding-bottom: 7px;
+}
+.btn__pink {
+    color: var(--Very-Pale-Blue);
+    background: var(--pink);
+    padding: 13px 40px;
+    font-weight: 600;
+    box-shadow: 0px 5px 10px #0002;
+    margin-top: 30px;
+}
+.mockups {
+    width: 100%;
+}
+.contenedor__info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 80px;
 }
-.footer-contacto .parrafo{
-    color: #eeee;
-    margin: 20px 0;
-    line-height: 25px;
-
+.contenedor__info .item p{
+    color: #a7b2bb;
+    font-weight: 600;
 }
-
-.address span{
-    display: block;
-    margin: 10px 0;
-    color: #eeee;
-    font-style: normal;
-}
-.icon-address{
-    margin-right: 20px;
-}
-
-.redes-sociales{
-    display: inline-flex;
-    gap: 15px;
-    margin: 50px 0;
-}
-
-.fab{
-    font-size: 35px;
-    color: #fff;
-    cursor: pointer;
-    transition: color .3s;
-}
-.fab:hover{
-    color: #00c5f9;
-}
-.suscribirse{
-    width: 50%;
-}
-
-.suscribirse .titulo{
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 15px;
-}
-.suscribirse .parrafo{
-    width: 66%;
-    color: #eee;
-    line-height: 25px;
-}
-.registro{
+.contenedor__info .info {
     display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    margin: 30px 0;
-    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
-.registro .email{
-    padding: 13px 10px;
-    border-radius: 5px;
-    width: 50%;
-    border: 1px solid var(--azul-oscuro);
-    outline: none;
+.contenedor__info .info img {
+    width: 30px;
 }
-.btn-rosado{
-    border-radius: 5px;
-    padding: 5px 40px;
-    cursor: pointer;
-    background: var(--pink);
-    color: var(--blanco);
-    font-weight: 700;
-    border: none;
-    transition: background .3s;
+.contenedor__info .info h2 {
+    font-size: 4em;
+    margin: 0;
 }
-.mensaje{
-    color: var(--rojo);
-    font-size: 13px;
-    position: absolute;
-    bottom: -25px;
-    display: none;
-}
-.active .email{
-    border: 1px solid var(--rojo);
-}
-.active .mensaje{
-    display: block;
-}
-.btn-rosado:hover{
-    background: var(--pink-claro);
-    color: var(--blanco);
-    border: none;
+.azul-oscuro {
+    color: var(--azul-oscuro);
 }
