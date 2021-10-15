@@ -186,7 +186,7 @@ address p:first-child {
 .mensaje__incorrecto {
     color: var(--rojo);
     display: none;
-    margin-top: -10px;
+    margin-top: -60px;
 }
 .campo__incorrecto [type="email"]{
     border: 1px solid var(--rojo);
@@ -223,6 +223,9 @@ address p:first-child {
     .contenedor__footer .caja:last-child {
         grid-column: 1 / 2;
         grid-row: 1 / 1;
+    }
+    .mensaje__incorrecto {
+        margin-top: -10px;
     }
 }
 
