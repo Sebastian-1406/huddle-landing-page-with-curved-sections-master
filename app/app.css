@@ -214,6 +214,13 @@ address p:first-child {
     .main section:last-child .contenedor__seccion .texto{
         text-align: center;
     }
+    .main .contenedor__seccion .texto{
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+    .main section:nth-child(2) .contenedor__seccion .texto {
+        grid-column: 2 / 3;
+    }
     .contenedor__footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
