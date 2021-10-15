@@ -1,32 +1,22 @@
-let email = document.getElementById("email");
-let botonEnviar = document.getElementById("enviar");
-let registro = document.getElementById("registro");
+let formulario = document.getElementById("formulario");
+let btn = document.getElementById("btn_enviar");
+let expresion = {correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/};
 
-let expresion = {correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/}
-
-
-const validarCampo = () => {
-
-    let validarInput = expresion.correo.test(email.value)
+const validarCampo = (e) => {
+    e.preventDefault()
+    let inputEmail = document.getElementById("email")
+    let validarInput = expresion.correo.test(inputEmail.value)
 
     if(validarInput) {
-        document.querySelector(".registro").classList.remove("active")
+        formulario.classList.remove("campo__incorrecto");
+        document.querySelector(".mensaje__incorrecto").style.display = "none"
+        formulario.reset()
     }
     else{
-         document.querySelector(".registro").classList.add("active")
+        formulario.classList.add("campo__incorrecto");
+        document.querySelector(".mensaje__incorrecto").style.display = "block"
     }
-
-    registro.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        if(validarInput) {
-            registro.reset()
-        }
-
-    })
 
 }
 
-
-email.addEventListener("keyup", validarCampo)
-botonEnviar.addEventListener("click", validarCampo)
+btn.addEventListener("click", validarCampo)

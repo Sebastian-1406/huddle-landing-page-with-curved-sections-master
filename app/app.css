@@ -18,7 +18,9 @@ body{
 .header {
     background: #fff;
 }
-
+.img-desktop {
+    display: none;
+}
 .nav {
     display: flex;
     justify-content: space-between;
@@ -59,6 +61,7 @@ body{
     background: #fff;
     padding: 5px 20px;
     padding-bottom: 7px;
+    transition: box-shadow ease .5s;
 }
 .btn__pink {
     color: var(--Very-Pale-Blue);
@@ -145,11 +148,13 @@ body{
     gap: 10px;
 }
 .formulario-suscribirse [type="email"]{
-    width: calc(100% - 40px);
-    padding: 10px 20px;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
     outline: none;
     border-radius: 5px;
     border: none;
+    font-size: 14px;
+    color: var(--azul-oscuro);
 }
 .formulario-suscribirse .btn {
     border-radius: 5px;
@@ -158,6 +163,11 @@ body{
     color: #fff;
     font-family: var(--font1);
     font-weight: 600;
+    transition: background ease .5s;
+}
+.contenedor__footer address {
+    display: flex;
+    flex-direction: column;
 }
 address p {
     display: inline-flex;
@@ -172,4 +182,152 @@ address p:first-child {
 }
 .redes .fab {
     font-size: 2em;
+}
+.mensaje__incorrecto {
+    color: var(--rojo);
+    display: none;
+    margin-top: -10px;
+}
+.campo__incorrecto [type="email"]{
+    border: 1px solid var(--rojo);
+}
+@media screen and (min-width:600px){
+    .contenedor {
+        padding: 50px 40px;
+    }
+    .contenedor__seccion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+        padding: 50px 40px;
+    }
+    .img-mobile {
+        display: none;
+    }
+    .img-desktop {
+        display: block;
+    }
+    .main section:last-child .contenedor__seccion{
+        display: block;
+    }
+    .main section:last-child .contenedor__seccion .texto{
+        text-align: center;
+    }
+    .contenedor__footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 70px 40px;
+    }
+    .contenedor__footer .caja:last-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 1;
+    }
+}
+
+@media screen and (min-width:1100px){
+    
+    .contenedor {
+        padding: 60px;
+    }
+    .logo {
+        width: 200px;
+    }
+    .btn {
+        font-size: 16px;
+        cursor: pointer;
+        transition: background ease .5s;
+    }
+    .btn__pink-claro:hover {
+        box-shadow: 0px 0px 7px #0002;
+        transition: box-shadow ease .5s;
+    }
+    .btn__pink:hover {
+        background: var(--pink-claro);
+        transition: background ease .5s;
+    }
+    .btn__pink {
+        padding: 20px 70px;
+    }
+    .texto p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .contenedor__header{
+        padding: 0 50px;
+    }
+    .contenedor__header .texto {
+        padding-top: 150px;
+    }
+    .contenedor__header .texto h1 {
+        font-size: 3em;
+    }
+    .contenedor__header .texto p {
+        max-width: 500px;
+        margin: auto;
+    }
+    .mockups {
+        width: auto;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .contenedor__info{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contenedor__info .info img {
+        width: 40px;
+    }
+    .contenedor__info .info h2 {
+        font-size: 5em;
+    }
+    .contenedor__seccion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 200px;
+        padding: 100px;
+        align-items: center;
+    }
+
+    .contenedor__seccion .texto {
+        text-align: left;
+    }
+    .contenedor__seccion .texto h2 {
+        font-size: 2em;
+    }
+    .contenedor__footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 70px 100px;
+    }
+    .contenedor__footer .caja:last-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 1;
+    }
+
+    .contenedor__footer .texto {
+        max-width: 350px;
+    }
+    .formulario-suscribirse {
+        flex-direction: row;
+        gap: 50px;
+    }
+    .formulario-suscribirse .btn:hover{
+        background: var(--pink-claro);
+        transition: background ease .5s;
+    }
+    .contenedor__footer .redes {
+        margin-top: 40px;
+    }
+    .contenedor__footer .redes .fab {
+        cursor: pointer;
+        transition: color ease .5s;
+    }
+    .contenedor__footer .redes .fab:hover {
+        color: #01c7f8;
+        transition: color ease .5s;
+    }
 }
